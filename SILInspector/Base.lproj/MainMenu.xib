@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -704,10 +704,10 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -741,15 +741,15 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6Wb-Bi-N4j">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6Wb-Bi-N4j">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -783,15 +783,15 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="RLj-Ys-sSN">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="RLj-Ys-sSN">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -825,15 +825,15 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6xK-jc-xyX">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6xK-jc-xyX">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -867,7 +867,7 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="GeD-NA-MZs">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="GeD-NA-MZs">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -909,15 +909,15 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="eT6-xl-aMl">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="eT6-xl-aMl">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -951,15 +951,15 @@
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Np3-fj-aaj">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Np3-fj-aaj">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="583" height="10000000"/>
+                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1001,7 +1001,7 @@
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-DF-TN6">
-                                <rect key="frame" x="460" y="13" width="62" height="17"/>
+                                <rect key="frame" x="461" y="13" width="61" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Font Size" id="KAc-5e-6q1">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1009,7 +1009,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="W4X-8s-k7l">
-                                <rect key="frame" x="18" y="12" width="84" height="18"/>
+                                <rect key="frame" x="18" y="12" width="83" height="18"/>
                                 <buttonCell key="cell" type="check" title="Demangle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MfZ-4u-Kcd">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1019,7 +1019,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ej-qEY">
-                                <rect key="frame" x="187" y="12" width="150" height="18"/>
+                                <rect key="frame" x="186" y="12" width="148" height="18"/>
                                 <buttonCell key="cell" type="check" title="Module Optimization" bezelStyle="regularSquare" imagePosition="left" inset="2" id="frf-2V-dgm">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1029,7 +1029,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="Jk3-8Q-Wow">
-                                <rect key="frame" x="106" y="12" width="77" height="18"/>
+                                <rect key="frame" x="105" y="12" width="77" height="18"/>
                                 <buttonCell key="cell" type="check" title="Optimize" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cpp-s5-Cd5">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
