@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	var demangle = false;
 	var optimize = false;
 	var moduleOptimize = false;
+	var parseAsLibrary = true;
 
 	@IBAction
 	func changeFontSize(sender:NSSlider) {
@@ -35,6 +36,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	@IBAction
 	func demangle(sender:NSButton) {
 		demangle = sender.state != 0
+		// cause a redraw
+		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
+	}
+
+	@IBAction
+	func parseAsLibrary(sender:NSButton) {
+		parseAsLibrary = sender.state != 0
 		// cause a redraw
 		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
 	}
@@ -168,6 +176,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 		asm = runProgram("swiftc - -emit-assembly")
 	}
 
+	func withParseAsLibrary(program:String) -> String {
+		return parseAsLibrary ? program + " -parse-as-library" : program
+	}
 	func withOptimize(program:String) -> String {
 		return optimize ? program + " -O" : program
 	}
@@ -179,7 +190,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	
 	func runProgram(program:String) -> String {
-		let toRun = withDemangle(withOptimize(withModuleOptimize(program)))
+		let toRun = withDemangle(withOptimize(withModuleOptimize(withParseAsLibrary(program))))
 		programText.stringValue = toRun
 		let inputPipe = NSPipe()
 		let inputFile = inputPipe.fileHandleForWriting
