@@ -23,48 +23,48 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	@IBOutlet weak var astView: NSScrollView!
 	@IBOutlet weak var parseView: NSScrollView!
 	
-	var demangle = false;
-	var optimize = false;
-	var moduleOptimize = false;
-	var parseAsLibrary = true;
+	var demangle = false
+	var optimize = false
+	var moduleOptimize = false
+	var parseAsLibrary = false
 
 	@IBAction
-	func changeFontSize(sender:NSSlider) {
+	func changeFontSize(_ sender:NSSlider) {
 		setFontSize(sender.integerValue)
 	}
 
 	@IBAction
-	func demangle(sender:NSButton) {
+	func demangle(_ sender:NSButton) {
 		demangle = sender.state != 0
 		// cause a redraw
-		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
+		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
-	func parseAsLibrary(sender:NSButton) {
+	func parseAsLibrary(_ sender:NSButton) {
 		parseAsLibrary = sender.state != 0
 		// cause a redraw
-		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
+		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
-	func optimize(sender:NSButton) {
+	func optimize(_ sender:NSButton) {
 		optimize = sender.state != 0
 		// cause a redraw
-		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
+		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
-	func moduleOptimize(sender:NSButton) {
+	func moduleOptimize(_ sender:NSButton) {
 		moduleOptimize = sender.state != 0
 		// cause a redraw
-		tabView(tabView, willSelectTabViewItem: tabView.selectedTabViewItem)
+		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 	
-	func setFontSize(size:Int) {
-		let font = NSFontManager.sharedFontManager().fontWithFamily("Monaco", traits: .UnboldFontMask , weight: 0, size: CGFloat(size))
+	func setFontSize(_ size:Int) {
+		let font = NSFontManager.shared().font(withFamily: "Monaco", traits: .unboldFontMask , weight: 0, size: CGFloat(size))
 		for scrollView in [sourceView, astView, parseView, silView, canonicalView, irView, asmView] {
-			let textView = scrollView.documentView as! NSTextView
+			let textView = scrollView?.documentView as! NSTextView
 			textView.font = font
 		}
 	}
@@ -124,37 +124,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 			(irView.documentView as! NSTextView).string = newValue
 		}
 	}
-	func applicationDidFinishLaunching(aNotification: NSNotification) {
+	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		setFontSize(36)
 		let textView = sourceView.documentView as! NSTextView
-		textView.automaticQuoteSubstitutionEnabled = false
-		textView.automaticDashSubstitutionEnabled = false
-		textView.automaticTextReplacementEnabled = false
-		textView.automaticSpellingCorrectionEnabled = false
+		textView.isAutomaticQuoteSubstitutionEnabled = false
+		textView.isAutomaticDashSubstitutionEnabled = false
+		textView.isAutomaticTextReplacementEnabled = false
+		textView.isAutomaticSpellingCorrectionEnabled = false
 	}
 
-	func applicationWillTerminate(aNotification: NSNotification) {
+	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
-	func tabView(tabView: NSTabView, willSelectTabViewItem tabViewItem: NSTabViewItem?) {
+	func tabView(_ tabView: NSTabView, willSelect tabViewItem: NSTabViewItem?) {
 		let title = tabViewItem?.label
-		switch(title) {
-		case .Some("SIL"):
+		switch title {
+		case .some("SIL"):
 			updateSIL()
-		case .Some("Canonical"):
+		case .some("Canonical"):
 			updateCanonical()
-		case .Some("AST"):
+		case .some("AST"):
 			updateAST()
-		case .Some("Parse"):
+		case .some("Parse"):
 			updateParse()
-		case .Some("IR"):
+		case .some("IR"):
 			updateIR()
-		case .Some("Assembly"):
+		case .some("Assembly"):
 			updateAsm()
 		default:
 			programText.stringValue = ""
-			break
 		}
 	}
 	func updateSIL() {
@@ -176,39 +175,39 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 		asm = runProgram("swiftc - -emit-assembly")
 	}
 
-	func withParseAsLibrary(program:String) -> String {
-		return parseAsLibrary ? program + " -parse-as-library" : program
+	func withParseAsLibrary(_ program:String) -> String {
+		return parseAsLibrary ? program + " -parse-as-library -module-name SILInspector" : program
 	}
-	func withOptimize(program:String) -> String {
+	func withOptimize(_ program:String) -> String {
 		return optimize ? program + " -O" : program
 	}
-	func withModuleOptimize(program:String) -> String {
+	func withModuleOptimize(_ program:String) -> String {
 		return moduleOptimize ? program + " -whole-module-optimization" : program
 	}
-	func withDemangle(program:String) -> String {
+	func withDemangle(_ program:String) -> String {
 		return demangle ? program + " | xcrun swift-demangle" : program
 	}
 	
-	func runProgram(program:String) -> String {
+	func runProgram(_ program:String) -> String {
 		let toRun = withDemangle(withOptimize(withModuleOptimize(withParseAsLibrary(program))))
 		programText.stringValue = toRun
-		let inputPipe = NSPipe()
+		let inputPipe = Pipe()
 		let inputFile = inputPipe.fileHandleForWriting
-		inputFile.writeData(source.dataUsingEncoding(NSUTF8StringEncoding)!)
+		inputFile.write(source.data(using: .utf8)!)
 		inputFile.closeFile()
-		let task = NSTask()
+		let task = Process()
 		task.launchPath = "/bin/bash"
 		task.arguments = [ "-c", toRun]
-		let errorPipe = NSPipe()
-		let outputPipe = NSPipe()
+		let errorPipe = Pipe()
+		let outputPipe = Pipe()
 		task.standardInput = inputPipe
 		task.standardOutput = outputPipe
 		task.standardError = errorPipe
 		task.launch()
 		let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
 		let errorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
-		let output = NSString(data: outputData, encoding: NSUTF8StringEncoding) as! String
-		let error =  NSString(data: errorData, encoding: NSUTF8StringEncoding) as! String
+		let output = String(data: outputData, encoding: .utf8)!
+		let error = String(data: errorData, encoding: .utf8)!
 		return error == "" ? output : error
 	}
 //	var fontSize: Int {

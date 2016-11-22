@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -678,36 +679,34 @@
         <window title="SILInspector" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="680" height="508"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="contentRect" x="335" y="390" width="872" height="518"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="680" height="508"/>
+                <rect key="frame" x="0.0" y="0.0" width="872" height="518"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-8o-ycR">
-                        <rect key="frame" x="13" y="33" width="654" height="410"/>
+                        <rect key="frame" x="13" y="33" width="846" height="420"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Source" identifier="1" id="dXj-4V-nKD">
                                 <view key="view" id="wOb-UX-h69">
-                                    <rect key="frame" x="10" y="33" width="634" height="364"/>
+                                    <rect key="frame" x="10" y="33" width="826" height="374"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifV-9W-s1J">
-                                            <rect key="frame" x="17" y="17" width="600" height="344"/>
+                                            <rect key="frame" x="17" y="17" width="792" height="354"/>
                                             <clipView key="contentView" id="fk6-Yx-UkL">
-                                                <rect key="frame" x="1" y="1" width="583" height="342"/>
+                                                <rect key="frame" x="1" y="1" width="775" height="352"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="aWA-9t-hGD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
+                                                    <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" id="aWA-9t-hGD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="775" height="352"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
+                                                        <size key="minSize" width="775" height="352"/>
+                                                        <size key="maxSize" width="775" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -717,7 +716,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="P6I-q9-qvR">
-                                                <rect key="frame" x="584" y="1" width="15" height="342"/>
+                                                <rect key="frame" x="776" y="1" width="15" height="352"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
@@ -739,17 +738,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="Nyz-eY-WX7">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6Wb-Bi-N4j">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="6Wb-Bi-N4j">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -781,17 +778,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="XfA-jI-l1V">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="RLj-Ys-sSN">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="RLj-Ys-sSN">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -823,17 +818,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="spJ-fB-DWn">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="6xK-jc-xyX">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="6xK-jc-xyX">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -865,17 +858,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="ObB-2c-4qG">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="GeD-NA-MZs">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="GeD-NA-MZs">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="612" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="612" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -907,17 +898,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="xmY-j8-zof">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="eT6-xl-aMl">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="eT6-xl-aMl">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -949,17 +938,15 @@
                                             <rect key="frame" x="17" y="17" width="600" height="344"/>
                                             <clipView key="contentView" id="xhi-SP-DyT">
                                                 <rect key="frame" x="1" y="1" width="583" height="342"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Np3-fj-aaj">
+                                                    <textView editable="NO" importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" id="Np3-fj-aaj">
                                                         <rect key="frame" x="0.0" y="0.0" width="583" height="342"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="583" height="342"/>
                                                         <size key="maxSize" width="600" height="10000000"/>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="583" height="342"/>
-                                                        <size key="maxSize" width="600" height="10000000"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -988,10 +975,10 @@
                         </connections>
                     </tabView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="C11-AH-o7D">
-                        <rect key="frame" x="20" y="445" width="640" height="43"/>
+                        <rect key="frame" x="20" y="455" width="832" height="43"/>
                         <subviews>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-qS-VDQ">
-                                <rect key="frame" x="526" y="11" width="96" height="21"/>
+                                <rect key="frame" x="718" y="12" width="96" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="8yj-l5-428"/>
                                 </constraints>
@@ -1001,7 +988,7 @@
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-DF-TN6">
-                                <rect key="frame" x="461" y="13" width="61" height="17"/>
+                                <rect key="frame" x="653" y="14" width="61" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Font Size" id="KAc-5e-6q1">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1009,7 +996,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="W4X-8s-k7l">
-                                <rect key="frame" x="18" y="12" width="83" height="18"/>
+                                <rect key="frame" x="18" y="13" width="83" height="18"/>
                                 <buttonCell key="cell" type="check" title="Demangle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MfZ-4u-Kcd">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1019,7 +1006,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="dAI-ej-qEY">
-                                <rect key="frame" x="186" y="12" width="148" height="18"/>
+                                <rect key="frame" x="186" y="13" width="148" height="18"/>
                                 <buttonCell key="cell" type="check" title="Module Optimization" bezelStyle="regularSquare" imagePosition="left" inset="2" id="frf-2V-dgm">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1029,7 +1016,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="Jk3-8Q-Wow">
-                                <rect key="frame" x="105" y="12" width="77" height="18"/>
+                                <rect key="frame" x="105" y="13" width="77" height="18"/>
                                 <buttonCell key="cell" type="check" title="Optimize" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cpp-s5-Cd5">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1038,12 +1025,24 @@
                                     <action selector="optimize:" target="Voe-Tx-rLC" id="1I9-90-Wfh"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="M11-wT-D9r">
+                                <rect key="frame" x="338" y="13" width="120" height="18"/>
+                                <buttonCell key="cell" type="check" title="Parse as Library" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3Y0-9j-9Vk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parseAsLibrary:" target="Voe-Tx-rLC" id="X8a-Xe-IRA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Rar-DF-TN6" firstAttribute="baseline" secondItem="Q2U-qS-VDQ" secondAttribute="baseline" id="1r5-kz-EWL"/>
                             <constraint firstItem="W4X-8s-k7l" firstAttribute="leading" secondItem="C11-AH-o7D" secondAttribute="leading" constant="20" symbolic="YES" id="3aD-HZ-dfE"/>
                             <constraint firstAttribute="trailing" secondItem="Q2U-qS-VDQ" secondAttribute="trailing" constant="20" symbolic="YES" id="3nd-e0-Rrj"/>
+                            <constraint firstItem="M11-wT-D9r" firstAttribute="baseline" secondItem="Rar-DF-TN6" secondAttribute="baseline" id="M1d-2f-CIc"/>
                             <constraint firstItem="Q2U-qS-VDQ" firstAttribute="centerY" secondItem="C11-AH-o7D" secondAttribute="centerY" id="TNK-Ee-wgH"/>
+                            <constraint firstItem="M11-wT-D9r" firstAttribute="leading" secondItem="dAI-ej-qEY" secondAttribute="trailing" constant="8" symbolic="YES" id="XyF-dy-M9s"/>
                             <constraint firstItem="Q2U-qS-VDQ" firstAttribute="leading" secondItem="Rar-DF-TN6" secondAttribute="trailing" constant="8" symbolic="YES" id="e5A-HM-9zT"/>
                             <constraint firstItem="dAI-ej-qEY" firstAttribute="leading" secondItem="Jk3-8Q-Wow" secondAttribute="trailing" constant="8" symbolic="YES" id="gsa-bO-8c9"/>
                             <constraint firstItem="Jk3-8Q-Wow" firstAttribute="leading" secondItem="W4X-8s-k7l" secondAttribute="trailing" constant="8" symbolic="YES" id="h8Z-j4-bIq"/>
@@ -1053,7 +1052,7 @@
                         </constraints>
                     </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WyR-dN-xD2">
-                        <rect key="frame" x="18" y="20" width="644" height="17"/>
+                        <rect key="frame" x="18" y="20" width="836" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" id="JgY-HY-cHW">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1075,7 +1074,7 @@
                     <constraint firstItem="Zl5-8o-ycR" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="71" id="y6s-1l-eEf"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="385" y="336"/>
+            <point key="canvasLocation" x="289" y="341"/>
         </window>
     </objects>
 </document>
