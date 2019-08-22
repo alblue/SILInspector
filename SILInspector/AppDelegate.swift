@@ -35,34 +35,34 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 
 	@IBAction
 	func demangle(_ sender:NSButton) {
-		demangle = sender.state != 0
+        demangle = sender.state != NSControl.StateValue.off
 		// cause a redraw
 		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
 	func parseAsLibrary(_ sender:NSButton) {
-		parseAsLibrary = sender.state != 0
+		parseAsLibrary = sender.state != NSControl.StateValue.off
 		// cause a redraw
 		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
 	func optimize(_ sender:NSButton) {
-		optimize = sender.state != 0
+		optimize = sender.state != NSControl.StateValue.off
 		// cause a redraw
 		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 
 	@IBAction
 	func moduleOptimize(_ sender:NSButton) {
-		moduleOptimize = sender.state != 0
+		moduleOptimize = sender.state != NSControl.StateValue.off
 		// cause a redraw
 		tabView(tabView, willSelect: tabView.selectedTabViewItem)
 	}
 	
 	func setFontSize(_ size:Int) {
-		let font = NSFontManager.shared().font(withFamily: "Monaco", traits: .unboldFontMask , weight: 0, size: CGFloat(size))
+		let font = NSFontManager.shared.font(withFamily: "Monaco", traits: .unboldFontMask , weight: 0, size: CGFloat(size))
 		for scrollView in [sourceView, astView, parseView, silView, canonicalView, irView, asmView] {
 			let textView = scrollView?.documentView as! NSTextView
 			textView.font = font
@@ -70,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var source:String {
 		get {
-			return (sourceView.documentView as! NSTextView).string!
+			return (sourceView.documentView as! NSTextView).string
 		}
 		set {
 			(sourceView.documentView as! NSTextView).string = newValue
@@ -78,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var sil:String {
 		get {
-			return (silView.documentView as! NSTextView).string!
+			return (silView.documentView as! NSTextView).string
 		}
 		set {
 			(silView.documentView as! NSTextView).string = newValue
@@ -86,7 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var canonical:String {
 		get {
-			return (canonicalView.documentView as! NSTextView).string!
+			return (canonicalView.documentView as! NSTextView).string
 		}
 		set {
 			(canonicalView.documentView as! NSTextView).string = newValue
@@ -94,7 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var parse:String {
 		get {
-			return (parseView.documentView as! NSTextView).string!
+			return (parseView.documentView as! NSTextView).string
 		}
 		set {
 			(parseView.documentView as! NSTextView).string = newValue
@@ -102,7 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var ast:String {
 		get {
-			return (astView.documentView as! NSTextView).string!
+			return (astView.documentView as! NSTextView).string
 		}
 		set {
 			(astView.documentView as! NSTextView).string = newValue
@@ -110,7 +110,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var asm:String {
 		get {
-			return (asmView.documentView as! NSTextView).string!
+			return (asmView.documentView as! NSTextView).string
 		}
 		set {
 			(asmView.documentView as! NSTextView).string = newValue
@@ -118,7 +118,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	var ir:String {
 		get {
-			return (irView.documentView as! NSTextView).string!
+			return (irView.documentView as! NSTextView).string
 		}
 		set {
 			(irView.documentView as! NSTextView).string = newValue
@@ -126,7 +126,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	}
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
-		setFontSize(36)
+		setFontSize(18)
 		let textView = sourceView.documentView as! NSTextView
 		textView.isAutomaticQuoteSubstitutionEnabled = false
 		textView.isAutomaticDashSubstitutionEnabled = false
@@ -140,9 +140,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 	func tabView(_ tabView: NSTabView, willSelect tabViewItem: NSTabViewItem?) {
 		let title = tabViewItem?.label
 		switch title {
-		case .some("SIL"):
+		case .some("SIL Raw"):
 			updateSIL()
-		case .some("Canonical"):
+		case .some("SIL Canonical"):
 			updateCanonical()
 		case .some("AST"):
 			updateAST()
@@ -208,7 +208,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTabViewDelegate {
 		let errorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
 		let output = String(data: outputData, encoding: .utf8)!
 		let error = String(data: errorData, encoding: .utf8)!
-		return error == "" ? output : error
+		return error == "" || error == "\n" ? output : error
 	}
 //	var fontSize: Int {
 //		set {
